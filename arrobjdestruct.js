@@ -11,11 +11,11 @@ console.log(a,b)
 
 let arr1=[12,13,45,67,87,44]
 let [c,d,e,f]=arr1
-//let [c,d,e,f,...rest]=arr1  //It's spread operator
+//let [c,d,e,f,...rest]=arr1  //rest operator
 console.log(c,d,e,f)
 
 let arr2=[22,33,43,46,26,11]
-let [x, ,y,...rest1]=arr2
+let [x, ,y,...rest1]=arr2  //rest operator
 console.log(x,y,rest1)
 
 
