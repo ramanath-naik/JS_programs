@@ -18,3 +18,19 @@ let arr2=[22,33,43,46,26,11]
 let [x, ,y,...rest1]=arr2
 console.log(x,y,rest1)
 
+
+//object
+const obj={p:1,q:3}
+let {p,q}=obj
+console.log(p,q)
+
+//We always have to name the variable the same as the name of the property. 
+//But in case we want to rename the variable we can use the colon : instead.
+const contacts={
+    Name:"ramu",
+    lastname:"naik",
+    age:24
+}
+let {Name:Firstname,lastname,age}=contacts
+console.log(Firstname,lastname,age)
+
