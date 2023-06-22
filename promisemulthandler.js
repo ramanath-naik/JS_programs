@@ -16,5 +16,10 @@ p1.then(()=>{
 
 })
 p1.then(()=>{
-    console.log("second handler")
-})
+    // console.log("second handler")
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("second handler")
+        }, 3000)
+    })
+}).then((value)=>{console.log(value)})
