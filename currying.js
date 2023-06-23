@@ -23,3 +23,20 @@ function addition(a){
 const res=addition(3)(4)(5);
 console.log(res)
 //this currying achieving through closures, so above program variables a,b,c private properties of the parent function
+
+
+//another example on object
+userobj={
+    Name:"ajay",
+    age:22
+}
+function userinfo(obj){
+    return function(info){
+        return obj[info];
+    }
+}
+let res1=userinfo(userobj);
+console.log(res1('Name'))
+console.log(res1('age'))
+//console.log(res('Name')()())//for more values
+
