@@ -13,7 +13,7 @@ var a=30;  // declaration hoisted to the top but not initialization
 console.log(a)
 
 
-//let and const with hoisting
+// let and const with hoisting
 // It will show error 
 // console.log(b)
 // console.log(d)
@@ -25,4 +25,10 @@ console.log(a)
 
 // let b=22
 // const d=11
+
+// we cannot hoist function expression also
+// fun();
+// const fun=()=>{
+//     console.log("hello")
+// }
 
