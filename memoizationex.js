@@ -10,6 +10,29 @@ const calc=(n)=>{
     return sum;
 }
 
+const memoize=(fun)=>{
+    let cache={};
+    return function(...args){
+        let n=args[0];
+        if(n in cache){
+            console.log("cache")
+            //console.log(cache)
+            return cache[n];
+        }
+        else{
+            console.log("calculating first time")
+            let result = fun(n)
+            cache[n]=result;
+            return result;
+        }
+    }
+}
+
 console.time()
-console.log(calc(7))
+const efficient=memoize(calc);
+console.log(efficient(7))
+console.timeEnd()
+
+console.time()
+console.log(efficient(7))
 console.timeEnd()
