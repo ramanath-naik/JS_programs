@@ -117,6 +117,7 @@ function createdata(newdata){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
             datas.push(newdata);
+            // resolve("resolved")
             let error=false;  //if it is true, then also we can catch the error.
             if(!error){
                 resolve();
