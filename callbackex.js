@@ -114,10 +114,19 @@ function getdatas()
 }
 
 function createdata(newdata){
-    setTimeout(()=>{
-        datas.push(newdata);
-
-    },2000)
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            datas.push(newdata);
+            let error=false;  //if it is true, then also we can catch the error.
+            if(!error){
+                resolve();
+            }
+            else{
+                reject("something wrong");
+            }
+    
+        },2000)
+    })
 }
-createdata({Name:"akshay",profession:"Software Developer"})
-getdatas();
+createdata({Name:"akshay",profession:"Software Developer"}).then(getdatas)
+// createdata({Name:"akshay",profession:"Software Developer"}).then(getdatas).catch(err => console.log(err)) //here we can catch the error
