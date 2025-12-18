@@ -34,7 +34,7 @@ function solveNQueens(n) {
             if (isSafe(row, col)) {
                 board[row][col] = 'Q';   // Place queen
                 placeQueen(row + 1);     // Recur
-                board[row][col] = '.';   // Backtrack
+                board[row][col] = '.';   // Backtrack (remove queen)
             }
         }
     }
